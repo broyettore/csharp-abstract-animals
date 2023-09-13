@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_abstract_animals
+namespace csharp_abstract_animals.Classes.Abstracts
 {
     public abstract class Animal
     {
-        public int Age {  get; }
+        public int Age { get; }
 
         public Animal(int age)
         {
-            this.Age = age;
+            Age = age;
         }
-       
+
         public void Sleep()
         {
             Console.WriteLine("Zzz");

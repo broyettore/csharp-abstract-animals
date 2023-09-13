@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using csharp_abstract_animals.Classes.Abstracts;
+using csharp_abstract_animals.Classes.Interfaces;
 
-namespace csharp_abstract_animals
+namespace csharp_abstract_animals.Classes
 {
-    public class Dog : Animal
+    public class Dog : Animal,ISwim
     {
         public string Name { get; }
         public Dog(int age, string name) : base(age)
         {
-            this.Name = name;
+            Name = name;
         }
 
         public override void animalNoise()
@@ -23,5 +25,11 @@ namespace csharp_abstract_animals
         {
             Console.WriteLine("it eats dog food");
         }
+
+        public void CanSwim()
+        {
+            Console.WriteLine("It can swim");
+        }
+
     }
 }

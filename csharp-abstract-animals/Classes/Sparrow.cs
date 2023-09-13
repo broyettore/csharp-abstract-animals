@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using csharp_abstract_animals.Classes.Abstracts;
+using csharp_abstract_animals.Classes.Interfaces;
 
-namespace csharp_abstract_animals
+namespace csharp_abstract_animals.Classes
 {
-    public class Sparrow : Animal
+    public class Sparrow : Animal,IFly
     {
         public Sparrow(int age) : base(age)
         {
@@ -20,6 +22,11 @@ namespace csharp_abstract_animals
         public override void foodType()
         {
             Console.WriteLine("it eats worms");
+        }
+
+        public void CanFly()
+        {
+            Console.WriteLine("It can fly");
         }
     }
 }
